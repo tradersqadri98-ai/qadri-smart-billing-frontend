@@ -105,7 +105,7 @@ export default function App() {
 
   try {
 
-    const response = await fetch("https://qadri-smart-billing-backend.onrender.com", {
+    const response = await fetch("https://qadri-smart-billing-backend.onrender.com/orders", {
 
       method: "POST",
 
