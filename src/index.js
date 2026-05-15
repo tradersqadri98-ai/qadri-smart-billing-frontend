@@ -19,7 +19,6 @@ root.render(
       <Routes>
 
         <Route path="/" element={<App />} />
-
         <Route path="/admin" element={<Admin />} />
 
       </Routes>

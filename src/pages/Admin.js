@@ -55,7 +55,6 @@ export default function Admin() {
     <div className="min-h-screen bg-black text-white p-6 relative overflow-hidden">
 
       <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full"></div>
-
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/20 blur-3xl rounded-full"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -78,11 +77,8 @@ export default function Admin() {
             onClick={fetchOrders}
             className="bg-gradient-to-r from-cyan-500 to-purple-500 px-6 py-4 rounded-2xl flex items-center gap-3 font-bold"
           >
-
             <RefreshCcw size={20} />
-
             Refresh Orders
-
           </button>
 
         </div>
@@ -115,13 +111,10 @@ export default function Admin() {
                   <div>
 
                     <div className="flex items-center gap-3 mb-3">
-
                       <PackageCheck className="text-cyan-400" />
-
                       <h2 className="text-3xl font-black text-cyan-300">
                         Order #{order.id}
                       </h2>
-
                     </div>
 
                     <div className="space-y-3 text-gray-300">
@@ -172,7 +165,7 @@ export default function Admin() {
 
       await fetch(
         `https://qadri-smart-billing-backend.onrender.com/orders/${order.id}`,
-        {
+                {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -193,8 +186,7 @@ export default function Admin() {
 
   <button
     onClick={async () => {
-
-      await fetch(
+       await fetch(
         `https://qadri-smart-billing-backend.onrender.com/orders/${order.id}`,
         {
           method: "PUT",
@@ -237,30 +229,22 @@ export default function Admin() {
                         <div className="space-y-2">
 
                           <p>
-                            <span className="text-gray-400">
-                              Category:
-                            </span>{" "}
+                            <span className="text-gray-400">Category:</span>{" "}
                             {item.category}
                           </p>
 
                           <p>
-                            <span className="text-gray-400">
-                              Brand:
-                            </span>{" "}
+                            <span className="text-gray-400">Brand:</span>{" "}
                             {item.brand}
                           </p>
 
                           <p>
-                            <span className="text-gray-400">
-                              Size:
-                            </span>{" "}
+                            <span className="text-gray-400">Size:</span>{" "}
                             {item.size}
                           </p>
 
                           <p>
-                            <span className="text-gray-400">
-                              Quantity:
-                            </span>{" "}
+                            <span className="text-gray-400">Quantity:</span>{" "}
                             {item.quantity}
                           </p>
 
@@ -287,5 +271,4 @@ export default function Admin() {
     </div>
 
   );
-
 }
